@@ -1,0 +1,21 @@
+{
+    "plugins": ["plugins/markdown"],
+    "source": {
+        "include": ["src"],
+        "includePattern": ".js$",
+        "excludePattern": "(node_modules|docs)"
+    },
+    "templates": {
+        "cleverLinks": false,
+        "monoSpaceLinks": false,
+        "staticFiles.include": "./docs/tutorials/sources"
+    },
+    "opts": {
+        "recurse": true,
+        "verbose":true,
+        "destination": "./docs/wbdocs",
+        "tutorials": "./docs/tutorials",
+        "template": "./docs/custom_template",
+        "readme": "./docs/readme/readme.md"
+    }
+}
