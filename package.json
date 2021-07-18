@@ -4,12 +4,13 @@
   "description": "Cardgame for Every Matrix Technical Test",
   "main": "src/server/index.js",
   "scripts": {
+    "mkdev": "mkdir build docs/wbdocs docs/wbdocs/game",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rm -rf build && webpack --config webpack/webpack.config.game.prod.js",
     "serve": "webpack serve --config webpack/webpack.config.dev.js",
     "deploy": "sudo bash ./scripts/docker_deploy.sh",
     "docs": "rm -rf docs/wbdocs && jsdoc -c jsdoc.json",
-    "deploy-docs": "cp -r build/src/game docs/wbdocs/game"
+    "ghdploy": "rm -rf docs/wbdocs/game && cp -r build/src/game docs/wbdocs/game && gh-pages -d docs/wbdocs"
   },
   "author": "Lucas C/ llucbrell",
   "license": "MIT",
@@ -22,6 +23,7 @@
     "@babel/preset-env": "^7.14.7",
     "babel-loader": "^8.2.2",
     "file-loader": "^6.2.0",
+    "gh-pages": "^3.2.3",
     "html-webpack-plugin": "^5.3.2",
     "image-webpack-loader": "^7.0.1",
     "jsdoc": "^3.6.7",

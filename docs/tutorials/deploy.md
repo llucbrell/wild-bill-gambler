@@ -25,11 +25,13 @@ This project uses Phaser as the main library to build the test.
 
 List of commands to automate tasks
 
+- npm run mkdev -> Build the necessary directories and files to start with the development.
 - npm run serve -> Start a local development server and watch over development changes.
 - npm run build -> Build a ready for production game inside build directory.
 - npm run deploy -> Build and exports a docker container with the game and a server inside deployment directory. Good to run the app on any machine. (usually need sudo permisions)
 - npm test -> Launch all the tests to check the app functionalities.
 - npm run docs -> Create html documentation for the game. 
+- npm run ghdploy -> Deploy the game and documentation on the GitHub Pages.
 
 ## Deployment of the app
 
