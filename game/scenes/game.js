@@ -1,15 +1,4 @@
 import {score} from '../index.js';
-import '../static/Clovers_King_black.png';
-import '../static/Clovers_1_white.png';
-import '../static/Clovers_2_white.png';
-import '../static/Clovers_3_white.png';
-import '../static/Clovers_4_white.png';
-import '../static/Clovers_5_white.png';
-import '../static/Clovers_6_white.png';
-import '../static/Clovers_7_white.png';
-import '../static/Clovers_8_white.png';
-import '../static/Clovers_9_white.png';
-import '../static/Clovers_10_white.png';
 
 /**
  * The class for the Scene called Game

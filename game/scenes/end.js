@@ -1,5 +1,4 @@
 import {score} from '../index.js';
-import img from '../static/button.png';
 
 /**
  * The class for the Scene called End
