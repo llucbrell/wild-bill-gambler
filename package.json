@@ -11,7 +11,8 @@
     "server": "npx http-server ./src/game",
     "deploy": "sudo bash ./scripts/docker_deploy.sh",
     "docs": "rm -rf docs/wbdocs && jsdoc -c jsdoc.json",
-    "ghdploy": "rm -rf docs/wbdocs/game && cp -r src/game docs/wbdocs/game && gh-pages -d docs/wbdocs"
+    "ghdploy": "rm -rf docs/wbdocs/game && mkdir docs/wbdocs/static && cp -r build/src/game docs/wbdocs/game && cp -r build/src/game/static docs/wbdocs && gh-pages -d docs/wbdocs"
+
   },
   "author": "Lucas C/ llucbrell",
   "license": "MIT",
