@@ -1,7 +1,7 @@
 import {score} from '../index.js';
 
 /**
- * The class for the Scene called Game
+ * The class for the Scene called End
  * @class End
  * @extends Phaser.Scene
  * @see https://newdocs.phaser.io/docs/3.55.2/Phaser.Scene
