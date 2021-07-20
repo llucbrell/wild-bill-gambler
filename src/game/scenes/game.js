@@ -76,9 +76,9 @@ export class Game extends Phaser.Scene {
 
     /**
      * Custom handler for gameobjectdown 
-     * @param {Phaser.Input.Pointer} pnt 
+     * @param {Phaser.Input.Pointer} pnt Pointer to the object clicked
      * @see https://newdocs.phaser.io/docs/3.55.0/Phaser.Input.Pointer
-     * @param {Phaser.GameObjects.Image} card 
+     * @param {Phaser.GameObjects.Image} card Image object of the card
      * @see https://newdocs.phaser.io/docs/3.54.0/Phaser.GameObjects.Image
      */
     onClickCard(pnt, card){
@@ -87,7 +87,7 @@ export class Game extends Phaser.Scene {
 
     /**
      * Make invisibl the backcard and visible the value card in base of an array index. 
-     * @param {number} index 
+     * @param {number} index Index of the array used to flip the cards
      */
     flipCard(index){
         this.flippedCards+=1;

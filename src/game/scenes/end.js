@@ -46,9 +46,9 @@ export class End extends Phaser.Scene {
 
     /**
      * Custom handler for gameobjectdown over button, stops the 'end' scene and restart the 'game' scene
-     * @param {Phaser.Input.Pointer} pnt 
-     * @see https://newdocs.phaser.io/docs/3.55.0/Phaser.Input.Pointer
-     * @param {Phaser.GameObjects.Image} btn 
+     * @param {Phaser.Input.Pointer} pnt Pointer to the clicked object
+ou can play [the game](./game/index.html) or read the test [conclusions](./../tutorials/conclusion.md).     * @see https://newdocs.phaser.io/docs/3.55.0/Phaser.Input.Pointer
+     * @param {Phaser.GameObjects.Image} btn Image Object of the button
      * @see https://newdocs.phaser.io/docs/3.54.0/Phaser.GameObjects.Image
      */
     onClickButton(pnt, btn){
