@@ -13,7 +13,7 @@ export class Score {
      * @param {number} amount score of the player
      * @param {string} token token for JWTs
      * @todo Implement JWTs
-     * @tutoria conclusion
+     * @tutorial conclusion
      */
     addToScore(amount, token){
         if(token === 'somejsontoken'){
@@ -32,7 +32,7 @@ export class Score {
     /**
      * Put the score to zero
      * @param {string} token token as example of the JWT
-     * @see tutorial conclusion
+     * @tutorial conclusion
      */
     scoreToZero(token){
         if(token === 'somejsontoken'){

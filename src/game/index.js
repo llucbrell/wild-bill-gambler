@@ -1,6 +1,6 @@
 import { Game } from './scenes/game.js';
 import { End } from './scenes/end.js';
-import { Score } from './scenes/utils/score.js';
+import { Score } from './utils/score.js';
 
 /**
  * @typedef {AUTO} AUTO
