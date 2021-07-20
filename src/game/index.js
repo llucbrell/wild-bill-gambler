@@ -1,4 +1,6 @@
 import { Game } from './scenes/game.js';
+import { End } from './scenes/end.js';
+import { Score } from './scenes/utils/score.js';
 
 /**
  * @typedef {AUTO} AUTO
@@ -9,7 +11,7 @@ import { Game } from './scenes/game.js';
  * This is the configuration object for the phaser lib,
  * this lib's imported using CDN in index.html
  * @type {Object}
- * @property {Phaser.CONSTANT} type Check the canvas compatibility of the browser
+ * @property {Phaser.CONSTANT} CANVAS If it's set to AUTO, check the browser compatibility
  * @property {string} parent Stablish the div id where the game it's placed
  * @property {number} width Set the width of the canvas
  * @property {number} height Set the height of the canvas
@@ -22,7 +24,7 @@ const config = {
     parent: 'phaser-div',
     width: 800,
     height: 500,
-    scene: [Game],
+    scene: [Game,End],
     physics:{
         default:'arcade',
         arcade:{
@@ -38,6 +40,12 @@ const config = {
  * @see https://newdocs.phaser.io/docs/3.55.2/Phaser.Game
  */
 var game = new Phaser.Game(config);
+
+
+/**
+ * Global object that handles the score of the game
+ */
+export var score = new Score();
 
 
 /**
