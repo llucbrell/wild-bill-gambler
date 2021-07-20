@@ -1,5 +1,6 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     entry: './src/game/index.js',
@@ -11,25 +12,15 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             template: './src/game/index.html'
-        })
+        }),
+        new CopyWebpackPlugin({
+            patterns: [
+                { from: "src/game/static", to: "game/static/" }
+        ],
+    })
     ],
     module: {
         rules: [
-            {
-                test: /\.(jpg|png|gif|ico)$/,
-                use: 
-                [
-                    {
-                        loader: 'file-loader',
-                        options: {
-                            name: '[name].[ext]',
-                            outputPath: 'src/game/static/',
-                            useRelativePath: true 
-                        }
-                    }
-                    
-                ]
-            },
             {
                 test: /\.js$/,
                 loader: 'babel-loader'

@@ -37,6 +37,21 @@ List of commands to automate tasks
 
 Three deployment types.
 
+### Run from source code
+
+Download the source code
+
+``` git clone https://github.com/llucbrell/wild-bill-gambler.git ```
+
+and then excute one of this commands
+
+``` npm run server ``
+this executes a http development server.
+
+```node src/server/index.js```
+this one execute a express server with the minified code (production code)
+
+
 ### Run HTML5 game on any server
 
 Get the code from build directory and serve the app with your fauvorite server system.
