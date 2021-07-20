@@ -15,7 +15,7 @@ module.exports = {
         }),
         new CopyWebpackPlugin({
             patterns: [
-                { from: "src/game/static", to: "game/static/" }
+                { from: "src/game/static", to: "static/" }
         ],
     })
     ],
