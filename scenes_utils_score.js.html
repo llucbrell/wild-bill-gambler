@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Namespace: Phaser</title>
+    <title>JSDoc: Source: scenes/utils/score.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,113 +17,59 @@
 
 <div id="main">
 
-    <h1 class="page-title">Namespace: Phaser</h1>
+    <h1 class="page-title">Source: scenes/utils/score.js</h1>
 
     
 
 
 
-
-<section>
-
-<header>
     
-        <h2>Phaser</h2>
-        
-    
-</header>
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * The class to handle the score
+ * @class Score
+ * 
+ */
+export class Score {
+    constructor(){
+        this.amount = 0; 
+    }
 
-<article>
-    <div class="container-overview">
-    
-        
-            <div class="description"><p>The namespace for the Phaser framework</p></div>
-        
+    /**
+     * Update the score
+     * @param {number} amount score of the player
+     * @param {string} token token for JWTs
+     * @todo Implement JWTs
+     * @tutorial conclusion
+     */
+    addToScore(amount, token){
+        if(token === 'somejsontoken'){
+            this.amount += amount;
+        }
+    }
 
-        
+    /**
+     * Return the actual player score
+     * @return {number} amount 
+     */
+    getScore(){
+        return this.amount;
+    }
 
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="index.js.html">index.js</a>, <a href="index.js.html#line51">line 51</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-    <dt class="tag-see">See:</dt>
-    <dd class="tag-see">
-        <ul>
-            <li><a href="https://newdocs.phaser.io/docs/3.55.2/Phaser">https://newdocs.phaser.io/docs/3.55.2/Phaser</a></li>
-        </ul>
-    </dd>
-    
-
-    
-</dl>
-
-
-        
-    
-    </div>
-
-    
-
-    
-
-    
-        <h3 class="subsection-title">Classes</h3>
-
-        <dl>
-            <dt><a href="Phaser.Scene.html">Scene</a></dt>
-            <dd></dd>
-        </dl>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</article>
-
-</section>
+    /**
+     * Put the score to zero
+     * @param {string} token token as example of the JWT
+     * @tutorial conclusion
+     */
+    scoreToZero(token){
+        if(token === 'somejsontoken'){
+            this.amount=0;
+        }
+    }
+}</code></pre>
+        </article>
+    </section>
 
 
 
