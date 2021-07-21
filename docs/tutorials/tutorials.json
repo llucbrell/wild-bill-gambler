@@ -1,5 +1,8 @@
 {
     "deploy": {
         "title": "Getting Started"
+    },
+    "conclusion": {
+        "title": "Technical Test Conclusions"
     }
 }

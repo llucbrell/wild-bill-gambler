@@ -1,4 +1,4 @@
-#/bin/bash
+#!/bin/bash
 
 rm -rf deployment
 sudo docker build -t wild-bill-every-matrix .

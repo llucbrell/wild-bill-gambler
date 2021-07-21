@@ -11,6 +11,8 @@
     "server": "npx http-server ./src/game",
     "deploy": "sudo bash ./scripts/docker_deploy.sh",
     "docs": "rm -rf docs/wbdocs && jsdoc -c jsdoc.json",
+    "drun": "sudo bash ./scripts/docker_run.sh",
+    "dstop": "sudo bash ./scripts/docker_stop.sh",
     "ghdploy": "rm -rf docs/wbdocs/game && mkdir docs/wbdocs/static && cp -r build/src/game docs/wbdocs/game && cp -r build/src/game/static docs/wbdocs && gh-pages -d docs/wbdocs"
 
   },

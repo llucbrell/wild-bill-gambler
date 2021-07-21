@@ -28,16 +28,23 @@ List of commands to automate tasks
 - npm run mkdev -> Build the necessary directories and files to start with the development.
 - npm run serve -> Start a local development server and watch over development changes.
 - npm run build -> Build a ready for production game inside build directory.
-- npm run deploy -> Build and exports a docker container with the game and a server inside deployment directory. Good to run the app on any machine. (usually need sudo permisions)
+- sudo npm run deploy -> Build and exports a docker container with the game and a server inside deployment directory. Good to run the app on any machine. (usually need sudo permisions)
+- sudo npm run drun -> Create docker image and run it in a container.
+- sudo npm run dstop -> Stops docker container and delete it.
 - npm test -> Launch all the tests to check the app functionalities.
 - npm run docs -> Create html documentation for the game. 
+- npm run server -> Create an http-server for quick development.
 - npm run ghdploy -> Deploy the game and documentation on the GitHub Pages.
 
 ## Deployment of the app
 
 Three deployment types.
 
-### Run from source code
+### Run HTML5 game on any server
+
+Get the code from build directory and serve the app with your fauvorite server system.
+
+#### Run from source code in different servers
 
 Download the source code
 
@@ -46,10 +53,16 @@ git clone https://github.com/llucbrell/wild-bill-gambler.git
 ```
 and then excute one of this commands
 
+#### Execute the app in an node http-server
+
+This is a good option for older hardware, with not much resources.
 ``` 
 npm run server 
 ```
+
 this executes a http development server.
+
+#### Execute the app in a node-express server
 
 ```
 node src/server/index.js
@@ -57,10 +70,13 @@ node src/server/index.js
 this one execute a express server with the minified code (production code).
 
 
-### Run HTML5 game on any server
+### Create dockerized app
 
-Get the code from build directory and serve the app with your fauvorite server system.
+Ro build and run a container you must to have installed docker and then to build the containerized app, after making the repo clone, execute this command
 
+```
+sodo npm run deploy
+```
 ### To import the docker container 
 
 To run the containerized app you need to install docker and run these commands.
